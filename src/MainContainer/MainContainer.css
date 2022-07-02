@@ -1,0 +1,16 @@
+.MainContainer{
+    background-color: var(--light);
+    padding: 0 30px;
+    margin-top: -30px;
+  
+}
+
+
+@media (max-width:790px){
+    .MainContainer{
+       
+        padding: 0 0px;
+      
+      
+    }
+}

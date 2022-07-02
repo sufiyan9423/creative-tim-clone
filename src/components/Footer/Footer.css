@@ -1,0 +1,28 @@
+.Footer{
+    padding: 24px 0;
+    display: flex;  
+    flex-wrap: wrap;
+    /* /* align-items: center; */
+    justify-content:space-between; 
+    margin-left: 15px;
+    margin-right: 15px;
+    gap: 1rem;
+}
+
+
+
+
+.footer-menu{
+    display: flex;
+    gap: 1rem;
+  
+}
+
+.footer-menu li{
+    list-style: none;
+    font-size: 12px;
+}
+
+.desc{
+    font-size: 12px;
+}

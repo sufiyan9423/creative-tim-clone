@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {  faAirFreshener, faCube } from '@fortawesome/free-solid-svg-icons';
+import Sidebar from './components/Sidebar/Sidebar';
+import Main from './components/Main/Main';
+import { useState } from 'react';
 
 function App() {
+  const [exapand,setExpand]=useState(false)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Sidebar exapand={exapand} setExpand={setExpand}/>
+        <Main exapand={exapand} setExpand={setExpand}/>
     </div>
   );
 }

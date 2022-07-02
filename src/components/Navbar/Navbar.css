@@ -1,0 +1,125 @@
+.Navbar{
+    /* background-color: var(--dark); */
+    background: linear-gradient(160deg,#2c2c2c,#1f1f1f);
+        
+    color: var(--white);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+}
+
+
+
+.Navbar .Items{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+   
+}
+
+.Items .search{
+    position:relative;
+}
+
+.Items .search input{
+  
+    outline: none;
+    background-color: hsla(0,0%,87.1%,.3);
+    padding: 12px 20px;
+    color: var(--white);
+    border-radius: 20px;
+    border: none;
+}
+
+.Items .search input::placeholder{
+    color: var(--white);
+    font-size: 12px;
+}
+
+.search i{
+    
+   
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.magifying{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+ 
+.Items .item{
+    padding: 12px 20px;
+}
+.Items .item:hover{
+
+    background-color: rgba(255, 246, 246, 0.2);
+    border-radius: 5px;
+
+}
+
+.item i{
+    font-size: 18px;
+}
+
+.item .arrow i  {
+    font-size: 8px;
+    margin-left: 5px;
+}
+
+.item a{
+    text-decoration: none;
+    color: var(--white);
+    display: flex;
+    align-items: flex-end;
+}
+
+/* hamguger menu*/
+.hamburger-menu {
+    margin: 2rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    height: 1.5rem;
+    width: 1.5rem;
+    visibility: hidden;     
+    cursor: pointer;
+    
+  }
+  .bar-top,
+  .bar-middle,
+  .bar-bottom {
+    height: 1px;
+    background: white;
+    border-radius: 5px;
+    margin: 3px 0;
+    transform-origin: left;
+    transition: all 0.2s;
+  }
+  
+  .bar-middle{
+    width: 1rem;
+  }
+
+  .hamburger-menu:hover .bar-middle{
+    width: 1.5rem;
+  }
+
+  @media (max-width:990px){
+    .hamburger-menu{
+        visibility: visible;
+    }
+    .hamburger-menu.exapand .bar-top {
+        transform: rotate(45deg);
+      }
+      .hamburger-menu.exapand .bar-middle {
+        transform:translateX(1rem);
+        opacity: 0;
+      }
+      .hamburger-menu.exapand .bar-bottom {
+        transform: rotate(-45deg);
+      }
+    
+  }

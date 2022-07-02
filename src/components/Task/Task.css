@@ -1,0 +1,129 @@
+.task .right{
+    display: flex;
+    flex: 9;
+    align-items: center;
+    
+}
+.right>p{
+    margin-right: 10px;
+}
+
+.task .left{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1;
+}
+
+.left>button{
+    background-color:transparent;
+    border: none;
+    padding: 8px; 
+
+    cursor: pointer;   
+    font-size: 16px;
+}
+
+.left>button:first-child{
+    
+    color: var(--blue);
+}
+
+.left>button:nth-child(2){
+    color: var(--green);
+}
+
+
+.mainlabel input[type=checkbox]{
+    opacity: 0;
+}
+
+.mainlabel {
+    display: block;
+    position: relative;  
+    padding-left: 45px; 
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 20px;
+  
+}
+
+.geekmark {
+    position: absolute;
+    top: 5px;
+    left: 9px;
+    height: 22px;
+    width: 22px;
+    background-color:transparent;
+    border: 0.1px solid rgb(173, 162, 162);
+}
+
+.mainlabel input:checked ~ .geekmark {
+    background-color: transparent;
+    border: 0.1px solid rgb(173, 162, 162);
+}
+
+.geekmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.mainlabel input:checked ~ .geekmark:after {
+    display: block;
+}
+
+.mainlabel .geekmark:after {
+    left: 7px;
+    bottom: 6px;
+    width: 6px;
+    height: 12px;
+    border: solid #333;
+    border-width: 0 0.5px 0.5px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+.popup{
+    position: absolute;
+    top: 30px;
+    left: -63px;
+    background-color: black;
+    color: var(--white);
+    font-size: 13px;
+    display: none;
+    z-index: 10;
+    padding: 6px;
+    width: 92px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.popup::after,.popup::before{
+    position: absolute;
+    display: inline-block;
+    content: "";
+}
+.popup::before{
+    border: 8px solid transparent;
+    border-bottom-color:black;
+   
+    top: -16px;
+    right: 9px;
+    left:auto
+}
+
+
+.edit:hover .popup{ 
+    display: block;
+}
+
+
+.remove{
+    position: relative;
+}
+.remove:hover .popup{
+    display: block;
+}

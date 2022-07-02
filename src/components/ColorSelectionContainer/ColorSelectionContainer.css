@@ -1,0 +1,158 @@
+
+
+.ColorSelectionContainer{
+    position: fixed;
+    top: 120px;
+    right: 0;
+  
+    
+    z-index: 1001;
+    cursor: pointer;
+    
+}
+
+
+.ColorSelectionContainer i{
+    font-size: 28px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 18px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.color-panel{
+    position: absolute;
+    right: 80px;
+    top: -50px;
+    background-color: var(--white);
+    box-shadow: 0 1px 15px 1px rgba(39,39,39,.1);
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 2px;
+    
+}
+
+.color-panel h4{
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.colors-list{
+    margin-bottom: 30px;
+    /* background-color: red; */
+    width: 100%;
+    height: 30px;
+}
+
+
+.colors-list {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.colors-list .color{
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    border:3px solid #fff;
+}
+
+.colors-list .color:first-child{
+    background-color: #ffb236;
+    
+}
+.colors-list .color:nth-child(2){
+  
+    background-color: #2ca8ff;
+}
+.colors-list .color:nth-child(3){
+    background-color: #18ce0f;
+}
+   
+
+.colors-list .color:nth-child(4){
+    background-color: #f96332;
+   
+}
+.colors-list .color:nth-child(5){
+    background-color: #ff3636;
+    
+}
+
+
+.color.active{
+    border:3px solid #0bf;
+   
+}
+
+.colors-list .color:hover{
+    border:3px solid #0bf;
+}
+
+.buttons{
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.buttons .btn-large{
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    margin-top:10px ;
+    color: white;
+}
+
+.buttons .btn-large:first-child{
+    background-color: #f96332;
+}
+
+.buttons .btn-large:nth-child(2){
+    background-color:  #ffbe55;
+}
+
+.buttons .btn-large:last-child{
+  background-color:   #4bb5ff;
+}
+
+.right-arrow{
+    z-index: 10001;
+    width: 10px;
+    height: 10px;  
+    position: absolute;
+    top: 18px;
+    left: -16px;
+    /* box-shadow: 0 1px 15px 1px rgba(39,39,39,.1); */
+   
+    
+}
+
+
+.right-arrow::after,.right-arrow::before{
+    content: "";
+    display: inline-block;  
+    top: 74px;
+    width: 16px;
+}
+
+
+.right-arrow::before{
+    border: 8px solid transparent;
+    border-left-color:#fff;
+    
+   
+    top: -16px;
+    right: 9px;
+    left:auto
+}
+
+.hidden{
+    display: none;
+}

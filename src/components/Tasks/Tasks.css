@@ -1,0 +1,80 @@
+.Tasks-card{
+    background-color: #fff;
+    border: 0;
+    flex: 1;
+    border-radius: 5px;   
+    width: 100%;
+    max-width: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 15px 1px rgba(39,39,39,.1);
+    padding: 10px 15px;
+}
+
+
+
+.tasks-head h3{
+    font-weight: 400;
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.tasks-head h1{
+    font-weight:400;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.tasks-body{
+    padding: 10px 15px;
+}
+.tasks-body .task{
+    display: flex;
+    
+}
+
+.task{
+    border-top: 1px solid rgb(219, 184, 184);
+}
+
+.task:last-child{
+    margin-bottom: 40px;      
+   
+}
+
+
+.tasks-footer{
+    padding: 10px 15px ;    
+    border-top: 1px solid rgb(219, 184, 184);
+}
+
+
+
+.tasks-footer i{
+    margin-right: 10px;
+    animation: rotate  2s linear infinite;
+    color: var(--gray);
+    font-size: 13px;
+   
+}
+
+
+
+    
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+
+
+
+@media (max-width:790px){
+
+    .Tasks-card{
+        max-width: 100%;
+    }
+}

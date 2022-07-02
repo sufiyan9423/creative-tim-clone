@@ -1,0 +1,134 @@
+.Sidebar {
+  /* background-color:  #2ca8ff; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100%;
+  /* overflow-x: hidden; */
+  z-index: 1000;
+  transition: all 0.2s linear;
+}
+
+.Sidebar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 70px;
+  color: var(--white);
+  padding: 0.5rem 1.3rem;
+
+  position: relative;
+}
+
+.Sidebar .logo img {
+  width: 34px;
+  height: 34px;
+}
+
+.Sidebar .logo span {
+  margin-left: 10px;
+}
+
+.Sidebar .logo::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: calc(100% - 30px);
+  bottom: 0;
+  right: 15px;
+  background-color: hsla(0, 0%, 100%, 0.5);
+}
+
+/* nav */
+
+.nav {
+  font-size: 10px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.navItem {
+  height: 60px;
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  width: 100%;
+  text-decoration: none;
+  padding: 10px;
+  padding: 15px 20px;
+}
+
+.navLink.active {
+  background-color: var(--white);
+  padding: 15px 20px;
+  border-radius: 40px;
+  /* color: var(--blue); */
+}
+
+.navLink i {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.navItem .navLink:hover {
+  background-color: rgba(255, 246, 246, 0.1);
+  border-radius: 40px;
+}
+
+.navLink.active:hover {
+  background-color: var(--white);
+}
+
+@media (max-width: 990px) {
+  .Sidebar {
+    transform: translateX(-260px);
+  }
+  .Sidebar.exapand {
+    transform: translateX(0px);
+  }
+}
+
+/* Styling Base on datasets */
+[data-color="red"] {
+  background-color: red;
+}
+[data-color="red"] .navLink.active {
+  color: red;
+}
+
+[data-color="blue"] {
+  background-color: #2ca8ff;
+}
+[data-color="blue"] .navLink.active {
+  color: #2ca8ff;
+}
+
+[data-color="yellow"] {
+  background-color: #ffb236;
+}
+[data-color="yellow"] .navLink.active {
+  color: #ffb236;
+}
+
+[data-color="green"] {
+  background-color: #18ce0f;
+}
+[data-color="green"] .navLink.active {
+  color: #18ce0f;
+}
+
+[data-color="orange"] {
+  background-color: #f96332;
+}
+[data-color="orange"] .navLink.active {
+  color: #f96332;
+}

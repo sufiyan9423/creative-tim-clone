@@ -1,0 +1,20 @@
+.Main{
+    margin-left: 260px; 
+     padding: 0px 0px;
+    overflow: hidden;
+     /* overflow-x: hidden; */
+     transition: all 0.2s linear;
+     position: relative;
+    
+}
+
+
+
+@media (max-width:990px){
+    .Main{
+        margin-left: 0px;
+    }   
+    .Main.exapand{
+        transform: translateX(260px);
+    }
+}
